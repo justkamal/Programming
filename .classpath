@@ -6,5 +6,6 @@
 	<classpathentry kind="src" path="codeforces"/>
 	<classpathentry kind="src" path="InterviewBit"/>
 	<classpathentry kind="src" path="kickstart"/>
+	<classpathentry kind="src" path="AtCoder"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
