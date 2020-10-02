@@ -3,5 +3,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="Programming/src"/>
 	<classpathentry kind="src" path="codechef"/>
+	<classpathentry kind="src" path="codeforces"/>
+	<classpathentry kind="src" path="InterviewBit"/>
+	<classpathentry kind="src" path="kickstart"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
