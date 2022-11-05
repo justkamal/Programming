@@ -21,14 +21,31 @@ public class ThreeSum {
         System.out.println(mainObj.findTriplet(nums));
     }
 
+    class Triplet {
+        private int x;
+        private int y;
+        private int z;
+
+        public Triplet(int x, int y, int z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        @Override
+        public int hashCode() {
+            return super.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Triplet triplet = (Triplet) obj;
+            return (this.x == triplet.x && this.y == triplet.y && this.z == triplet.z);
+        }
+    }
+
     public List<List<Integer>> findTriplet(int nums[]) {
-        List<List<Integer>> result = new ArrayList<>();
-        Set<List<Integer>> uniqueSet = new TreeSet<>(new Comparator<List<Integer>>() {
-            @Override
-            public int compare(List<Integer> l1, List<Integer> l2) {
-                return l1.containsAll(l2) ? 0 : 1;
-            }
-        });
+        Set<List<Integer>> uniqueSet = new HashSet<>();
         //Approach: Sorting numbers and then fixing each number linearly as first and doing two-pointer search
         // on the right partition of it, finding optimal pairs for 'first' number
         Arrays.sort(nums);
@@ -48,13 +65,12 @@ public class ThreeSum {
                     triplet.add(nums[right]);
                     if (!uniqueSet.contains(triplet)) {
                         uniqueSet.add(triplet);
-                        result.add(triplet);
                     }
                     ++left;
                     --right;
                 }
             }
         }
-        return result;
+        return uniqueSet.stream().toList();
     }
 }
