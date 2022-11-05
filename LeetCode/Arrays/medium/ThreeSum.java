@@ -29,27 +29,29 @@ public class ThreeSum {
                 return l1.containsAll(l2) ? 0 : 1;
             }
         });
+        //Approach: Sorting numbers and then fixing each number linearly as first and doing two-pointer search
+        // on the right partition of it, finding optimal pairs for 'first' number
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 2; ++i) {
-            int b = i + 1;
-            int c = nums.length - 1;
-            while (b < c) {
-                int currSum = nums[i] + nums[b] + nums[c];
+        for (int first = 0; first < nums.length - 2; ++first) {
+            int left = first + 1;
+            int right = nums.length - 1;
+            while (left < right) {
+                int currSum = nums[first] + nums[left] + nums[right];
                 if (currSum < 0) {
-                    ++b;
+                    ++left;
                 } else if (currSum > 0) {
-                    --c;
+                    --right;
                 } else if (currSum == 0) {
                     List<Integer> triplet = new ArrayList<>();
-                    triplet.add(nums[i]);
-                    triplet.add(nums[b]);
-                    triplet.add(nums[c]);
+                    triplet.add(nums[first]);
+                    triplet.add(nums[left]);
+                    triplet.add(nums[right]);
                     if (!uniqueSet.contains(triplet)) {
                         uniqueSet.add(triplet);
                         result.add(triplet);
                     }
-                    ++b;
-                    --c;
+                    ++left;
+                    --right;
                 }
             }
         }
