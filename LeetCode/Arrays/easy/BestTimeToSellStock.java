@@ -3,6 +3,7 @@ package Arrays.easy;
 
 /**
  * Problem link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * Companies: amazon | bloomberg | facebook | microsoft | uber
  * */
 public class BestTimeToSellStock {
 

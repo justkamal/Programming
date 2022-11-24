@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * Problem link: https://leetcode.com/problems/3sum/
+ * Companies: adobe | amazon | bloomberg | facebook | microsoft
  */
 public class ThreeSum {
     public static void main(String[] args) {

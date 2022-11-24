@@ -3,6 +3,7 @@ package Arrays.easy;
 
 /**
  * Problem link: https://leetcode.com/problems/search-insert-position/
+ * Companies:
  */
 public class SearchInsertPosition {
 

@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * Problem link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ * Companies: bloomberg | facebook | microsoft
  */
 public class RemoveDuplicates {
 

@@ -2,6 +2,10 @@ package LinkedList.medium;
 
 import LinkedList.ListNode;
 
+/**
+ * Problem: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ * */
+
 public class RemoveNthNodeFromEnd {
 
     private static int calculateSize(ListNode l1) {

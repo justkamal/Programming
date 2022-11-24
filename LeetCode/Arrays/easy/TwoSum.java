@@ -7,8 +7,8 @@ import java.util.Objects;
 
 /**
  * Problem link: https://leetcode.com/problems/two-sum/
+ * Companies: adobe | airbnb | amazon | apple | bloomberg | dropbox | facebook | linkedin | microsoft | uber | yahoo | yelp
  */
-
 
 public class TwoSum {
 

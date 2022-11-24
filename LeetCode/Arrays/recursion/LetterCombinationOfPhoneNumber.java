@@ -3,6 +3,11 @@ package Arrays.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Problem: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ * Companies: amazon | dropbox | facebook | google | uber
+ * */
+
 public class LetterCombinationOfPhoneNumber {
 
     char[][] map = {{}, {}, {'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'},
@@ -10,7 +15,7 @@ public class LetterCombinationOfPhoneNumber {
 
     public static void main(String[] args) {
         LetterCombinationOfPhoneNumber mainObj = new LetterCombinationOfPhoneNumber();
-        String digits = "";
+        String digits = "23";
         System.out.println(mainObj.letterCombinations(digits));
     }
 

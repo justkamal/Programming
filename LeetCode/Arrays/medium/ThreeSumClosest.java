@@ -3,6 +3,11 @@ package Arrays.medium;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * Problem: https://leetcode.com/problems/3sum-closest/
+ * Companies: bloomberg
+ * */
+
 public class ThreeSumClosest {
     class Pair {
         int x, y;

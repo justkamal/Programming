@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * Problem link: https://leetcode.com/problems/length-of-last-word/
+ * Companies:
  * */
 public class LengthOfLastWord {
 
