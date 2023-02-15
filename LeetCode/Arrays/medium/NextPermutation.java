@@ -1,0 +1,41 @@
+package Arrays.medium;
+
+import java.util.Arrays;
+
+public class NextPermutation {
+
+    public static void main(String[] args) {
+        NextPermutation mainObj = new NextPermutation();
+        int[] arr = {1, 2, 3};
+        mainObj.nextPermutation(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public void nextPermutation(int[] nums) {
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i + 1] <= nums[i]) {
+            i--;
+        }
+        if (i >= 0) {
+            int j = nums.length - 1;
+            while (nums[j] <= nums[i]) {
+                j--;
+            }
+            swap(nums, i, j);
+        }
+        reverse(nums, i + 1);
+    }
+
+    private void reverse(int[] nums, int start) {
+        int i = start, j = nums.length - 1;
+        while (i < j) {
+            swap(nums, i++, j--);
+        }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        nums[i] = nums[i] + nums[j];
+        nums[j] = nums[i] - nums[j];
+        nums[i] = nums[i] - nums[j];
+    }
+}

@@ -1,7 +1,5 @@
 package Arrays.easy;
 
-import java.util.Arrays;
-
 public class UpperLower {
 
     public static void main(String[] args) {

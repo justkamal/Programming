@@ -1,4 +1,4 @@
-package Arrays.medium;
+package Math.medium;
 
 /**
  * Problem link: https://leetcode.com/problems/reverse-integer/
