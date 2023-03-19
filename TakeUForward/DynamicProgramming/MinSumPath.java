@@ -24,7 +24,7 @@ public class MinSumPath {
                 }
                 --n;
             }
-            System.out.println("Answer: " + minimumPathSum(arr, N));
+            System.out.println("Answer: " + minimumPathSumOptimal(arr, N));
         }
     }
 
@@ -49,5 +49,20 @@ public class MinSumPath {
         }
 
         return min;
+    }
+
+    //if you compute from bottom row to top, you wouldn't need to compute min of all at the last stage as going up
+    //will eventually end up at one element array only (triangle property)
+
+    public static int minimumPathSumOptimal(int[][] triangle, int n) {
+        int down, rightDiag;
+        for (int i = n-2; i >= 0; --i) {
+            for (int j = 0; j <= i; ++j) {
+                down = triangle[i+1][j];
+                rightDiag = triangle[i+1][j+1];
+                triangle[i][j] += Math.min(down, rightDiag);
+            }
+        }
+        return triangle[0][0];
     }
 }
